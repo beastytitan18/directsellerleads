@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       <header className="main-header">
         <div className="container header-content">
           <Link to="/" className="logo">
-            <Zap className="text-accent" />
+            <img src="/favicon.png" alt="DSL Logo" className="w-6 h-6" />
             <span>Direct Seller Leads</span>
           </Link>
 
@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
         <div className="container footer-grid">
           <div className="footer-brand">
             <Link to="/" className="logo">
-              <Zap className="text-accent" />
+              <img src="/favicon.png" alt="DSL Logo" className="w-6 h-6" />
               <span>Direct Seller Leads</span>
             </Link>
             <p className="footer-desc">
