@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Support = () => {
     return (
@@ -16,14 +16,6 @@ const Support = () => {
                         <div className="flex items-center gap-4">
                             <Mail className="text-blue-400" />
                             <span className="text-gray-300">support@directsellerleads.com</span>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <Phone className="text-blue-400" />
-                            <span className="text-gray-300">+1 (888) 123-4567</span>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <MapPin className="text-blue-400" />
-                            <span className="text-gray-300">123 Real Estate Blvd, Austin, TX 78701</span>
                         </div>
                     </div>
 

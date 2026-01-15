@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Home, DollarSign, Activity, User, FileText } from 'lucide-react';
+import { Activity, FileText } from 'lucide-react';
 
 const MOCK_LEADS = [
     {
@@ -14,7 +14,7 @@ const MOCK_LEADS = [
         sqft: 1800,
         beds: 3,
         baths: 2,
-        price: 350,
+        price: 49,
         equity: 'High',
         debt: 185000,
         callSummary: 'Owner confirmed they need to sell quickly due to family situation. Property is rented month-to-month, tenant willing to vacate. Needs minimal repairs, ready for showings.'
@@ -31,7 +31,7 @@ const MOCK_LEADS = [
         sqft: 2400,
         beds: 4,
         baths: 3,
-        price: 550,
+        price: 65,
         equity: 'Med',
         debt: 'N/A',
         callSummary: 'Inherited from parents 6 months ago. All units currently occupied. Owner wants cash offer, flexible on timeline. Property in good condition.'
@@ -48,7 +48,7 @@ const MOCK_LEADS = [
         sqft: 1500,
         beds: 3,
         baths: 2,
-        price: 299,
+        price: 39,
         equity: 'High',
         debt: 95000,
         callSummary: 'Job transfer to California next month. Listing expired after 90 days. Willing to sell below market for quick close. Property needs cosmetic updates.'
@@ -65,7 +65,7 @@ const MOCK_LEADS = [
         sqft: 1100,
         beds: 2,
         baths: 2,
-        price: 200,
+        price: 29,
         equity: 'High',
         debt: 125000,
         callSummary: 'Owned for 8 years, tired of property management. Tenant has 3 months left on lease. HOA fees current. Owner very motivated to sell.'
@@ -85,7 +85,6 @@ const Marketplace = () => {
             <div className="leads-container">
                 {MOCK_LEADS.map((lead) => (
                     <div key={lead.id} className="marketplace-lead-card">
-                        {/* Header */}
                         <div className="marketplace-card-header">
                             <div className="flex items-center gap-3 flex-wrap">
                                 <span className="exclusive-tag">Exclusive Lead</span>
@@ -96,22 +95,8 @@ const Marketplace = () => {
                             </div>
                         </div>
 
-                        {/* Body */}
                         <div className="marketplace-card-body">
-                            {/* Map Section */}
-                            <div className="marketplace-map-section">
-                                <div className="marketplace-map-wrapper">
-                                    <div className="lead-map-placeholder"></div>
-                                    <div className="marketplace-map-label">
-                                        <MapPin className="w-4 h-4 text-red-500" />
-                                        <span>{lead.city} area</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Content Section */}
-                            <div className="marketplace-content-section">
-                                {/* Call Summary */}
+                            <div className="marketplace-content-section" style={{ width: '100%' }}>
                                 <div className="marketplace-call-summary">
                                     <div className="marketplace-summary-header">
                                         <FileText className="w-3 h-3" />
@@ -122,7 +107,6 @@ const Marketplace = () => {
                                     </p>
                                 </div>
 
-                                {/* Property Details Grid */}
                                 <div className="marketplace-details-grid">
                                     <div className="marketplace-detail-item">
                                         <span className="marketplace-detail-label">Occupancy</span>
@@ -146,11 +130,10 @@ const Marketplace = () => {
                                     </div>
                                     <div className="marketplace-detail-item">
                                         <span className="marketplace-detail-label">Urgency</span>
-                                        <span className="marketplace-detail-value text-red-400">{lead.listed === 'Yes (Expired)' ? '1 month' : '1 month'}</span>
+                                        <span className="marketplace-detail-value text-red-400">1 month</span>
                                     </div>
                                 </div>
 
-                                {/* AI Score & CTA */}
                                 <div className="marketplace-cta-section">
                                     <div className="marketplace-ai-badge">
                                         <span className="marketplace-ai-label">Deal Engine AI</span>
@@ -162,7 +145,14 @@ const Marketplace = () => {
                                             <span className="marketplace-price-label">Unlock Price</span>
                                             <span className="marketplace-price-value">${lead.price}</span>
                                         </div>
-                                        <button className="btn btn-primary w-full">Unlock Lead</button>
+                                        <a
+                                            href="https://calendly.com/sam-directsellerleads/30min"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="btn btn-primary w-full text-center"
+                                        >
+                                            Unlock Lead
+                                        </a>
                                     </div>
                                 </div>
                             </div>

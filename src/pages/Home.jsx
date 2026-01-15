@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, TrendingUp, Shield, Zap, MapPin, Activity, User, FileText, Lock } from 'lucide-react';
+import { ArrowRight, CheckCircle, TrendingUp, Shield, Activity, Zap, MapPin, FileText, Lock } from 'lucide-react';
 
 const Home = () => {
     return (
@@ -170,21 +170,9 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className="lead-card-body p-6 home-lead-grid gap-6">
-                                {/* Left: Map */}
-                                <div className="lead-map-area h-32 lg:h-full rounded-lg overflow-hidden relative bg-slate-800">
-                                    <div className="absolute inset-0 bg-black/40" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=300&h=200")', backgroundSize: 'cover' }}></div>
-                                    <div className="relative z-10 font-bold bg-black/60 px-2 py-1 rounded text-xs text-white absolute bottom-2 left-2">
-                                        <MapPin className="inline w-3 h-3 mr-1 text-red-500" />
-                                        South Roxana
-                                    </div>
-                                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
-                                        <Lock className="w-8 h-8 text-white/50" />
-                                    </div>
-                                </div>
-
-                                {/* Center: Details */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6 text-sm">
+                            <div className="lead-card-body p-6" style={{ display: 'block' }}>
+                                {/* Details */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6 text-sm mb-6">
                                     <div className="col-span-2 bg-slate-800/50 p-3 rounded border border-slate-700">
                                         <div className="text-gray-400 text-xs mb-1 font-bold uppercase tracking-wider">AI Call Summary</div>
                                         <p className="text-gray-300 text-xs leading-relaxed italic">
@@ -218,23 +206,30 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                {/* Right: AI Score & Action */}
-                                <div className="flex flex-col justify-between h-full gap-4">
-                                    <div className="bg-slate-800/50 rounded p-3 text-center border border-slate-700">
-                                        <div className="text-gray-400 text-xs uppercase mb-1 font-bold">Deal Engine AI</div>
-                                        <div className="w-12 h-12 bg-green-900/50 text-green-400 text-2xl font-bold rounded-full flex items-center justify-center mx-auto border border-green-500/30">
-                                            A+
+                                {/* AI Score & Action */}
+                                <div className="flex items-center justify-between pt-6 border-t border-slate-700">
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-slate-800/50 rounded p-3 text-center border border-slate-700 flex items-center gap-3">
+                                            <div className="text-gray-400 text-xs uppercase font-bold">Deal Engine AI</div>
+                                            <div className="w-10 h-10 bg-green-900/50 text-green-400 text-xl font-bold rounded-full flex items-center justify-center border border-green-500/30">
+                                                A+
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div className="mt-auto">
-                                        <div className="text-center mb-2">
+                                    <div className="flex items-center gap-6">
+                                        <div className="text-right">
                                             <div className="text-gray-500 text-xs uppercase mb-1">Unlock Price</div>
-                                            <span className="text-2xl font-bold text-white">$145</span>
+                                            <span className="text-2xl font-bold text-white">$49</span>
                                         </div>
-                                        <Link to="/marketplace" className="btn btn-primary w-full text-sm py-2">
+                                        <a
+                                            href="https://calendly.com/sam-directsellerleads/30min"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="btn btn-primary px-8 py-2 text-sm"
+                                        >
                                             Unlock Lead
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

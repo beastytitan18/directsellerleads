@@ -1,4 +1,5 @@
 /* Design System Variables */
+
 :root {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
@@ -1026,6 +1027,25 @@ button {
   overflow: hidden;
 }
 
+.marketplace-map-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.marketplace-lead-card:hover .marketplace-map-image {
+  transform: scale(1.05);
+}
+
+.marketplace-map-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, transparent 60%);
+  z-index: 5;
+}
+
 @media (min-width: 768px) {
   .marketplace-map-wrapper {
     height: 100%;
@@ -1047,6 +1067,47 @@ button {
   font-weight: 600;
   font-size: 0.875rem;
   color: #fff;
+}
+
+.marketplace-map-marker {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+}
+
+.marker-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #ef4444;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.marker-ping {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(239, 68, 68, 0.4);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: marker-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes marker-ping {
+
+  75%,
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
 }
 
 /* Content Section */
