@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
 
           <div className="header-actions">
             <a
-              href="https://calendly.com/iamiornyman-proton/new-meeting?"
+              href="https://calendly.com/sam-directsellerleads/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -72,7 +72,7 @@ const Layout = ({ children }) => {
                 </Link>
               ))}
               <a
-                href="https://calendly.com/iamiornyman-proton/new-meeting?"
+                href="https://calendly.com/sam-directsellerleads/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary w-full"

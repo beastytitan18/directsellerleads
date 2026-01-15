@@ -12,7 +12,7 @@ const AdService = () => {
                         Stop wasting money on agencies that don't understand real estate.
                         Our team manages over $1M/mo in ad spend for wholesalers and flippers.
                     </p>
-                    <a href="https://calendly.com/iamiornyman-proton/new-meeting?" target="_blank" className="btn btn-primary text-lg px-8 py-4">
+                    <a href="https://calendly.com/sam-directsellerleads/30min" target="_blank" className="btn btn-primary text-lg px-8 py-4">
                         Book a Strategy Call
                     </a>
                 </div>

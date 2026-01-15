@@ -35,7 +35,7 @@ const Home = () => {
                         <Link to="/marketplace" className="btn btn-primary btn-lg">
                             Browse Marketplace <ArrowRight className="icon-sm" />
                         </Link>
-                        <a href="https://calendly.com/iamiornyman-proton/new-meeting?" target="_blank" className="btn btn-outline btn-lg">
+                        <a href="https://calendly.com/sam-directsellerleads/30min" target="_blank" className="btn btn-outline btn-lg">
                             Book a Strategy Call
                         </a>
                     </div>
