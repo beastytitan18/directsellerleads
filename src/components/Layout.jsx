@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Menu, X } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -18,6 +19,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="app-container">
+      <Analytics />
       <header className="main-header">
         <div className="container header-content">
           <Link to="/" className="logo">
